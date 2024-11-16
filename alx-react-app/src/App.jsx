@@ -16,9 +16,13 @@ function App() {
     <WelcomeMessage />
     </div>
     <div>
-    <Header/>
-    <MainContent/>
-    <Footer/>
+      <Header/>
+    </div>
+    <div>
+      <MainContent/>
+    </div>
+    <div>
+      <Footer/>
     </div>
       <div>
         <a href="https://vite.dev" target="_blank">
