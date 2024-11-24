@@ -1,21 +1,17 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Home from './pages/Home';
-import Profile from './pages/Profile';
-import Login from './pages/Login';
-import BlogPost from './pages/BlogPost';
+import { QueryClient, QueryClientProvider } from 'react-query';
+import PostsComponent from './components/PostsComponent';
 
-function App() {
+// Initialize QueryClient
+const queryClient = new QueryClient();
+
+const App = () => {
   return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/profile/*" element={<Profile />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/blog/:postId" element={<BlogPost />} />
-      </Routes>
-    </Router>
+    <QueryClientProvider client={queryClient}>
+      <h1>React Query Demo</h1>
+      <PostsComponent />
+    </QueryClientProvider>
   );
-}
+};
 
 export default App;
