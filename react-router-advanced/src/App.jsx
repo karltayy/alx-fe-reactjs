@@ -14,6 +14,11 @@ function App() {
   <Route path="/blog/:id" element={<BlogPost />} /> {/* Dynamic Route */}
     <Route path="details" element={<ProfileDetails />} />
     <Route path="settings" element={<ProfileSettings />} />
+     {/* Protect the Profile route */}
+     <Route
+          path="/profile"
+          element={<ProtectedRoute element={<Profile />} />}
+        />
   </Route>
   <Route path="*" element={<NotFound />} />
         <Route path="/" element={<Home />} />
