@@ -11,7 +11,7 @@ function App() {
       <Routes>
       <Route path="/" element={<Home />} />
   <Route path="/profile" element={<Profile />}>
-  <Route path="/post/:postId" element={<BlogPost />} /> {/* Dynamic Route */}
+  <Route path="/blog/:id" element={<BlogPost />} /> {/* Dynamic Route */}
     <Route path="details" element={<ProfileDetails />} />
     <Route path="settings" element={<ProfileSettings />} />
   </Route>
