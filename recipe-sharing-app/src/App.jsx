@@ -4,6 +4,8 @@ import { createBrowserHistory } from 'history';
 import RecipeList from './components/RecipeList';
 import AddRecipeForm from './components/AddRecipeForm';
 import RecipeDetails from './components/RecipeDetails';
+import FavoritesList from './components/FavoritesList';
+import RecommendationsList from './components/RecommendationsList';
 
 const customHistory = createBrowserHistory();
 
@@ -16,6 +18,8 @@ const App = () => {
           <Link to="/">Home</Link> | <Link to="/add">Add Recipe</Link>
         </nav>
         <Routes>
+        <Route path="/favorites" element={<FavoritesList />} />
+        <Route path="/recommendations" element={<RecommendationsList />} />
           <Route
             path="/"
             element={
