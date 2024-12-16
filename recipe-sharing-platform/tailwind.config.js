@@ -7,11 +7,10 @@ export default {
   plugins: [],
 }
 module.exports = {
-  content: ['./src/**/*.{js,jsx,ts,tsx}'],
-  darkMode: false, // Or 'media' / 'class' based on preference
+  content: ['./src/**/*.{js,jsx,ts,tsx}', './public/index.html'],
+  darkMode: false, // You can set it to 'media' or 'class' if needed
   theme: {
     extend: {},
   },
   plugins: [],
 };
-
